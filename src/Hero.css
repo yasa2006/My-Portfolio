@@ -1,0 +1,35 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Make it take up most of the viewport height */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 4.5rem; /* Make it large */
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  /* The gradient is already applied by index.css */
+  /* This adds a subtle shadow to make the text pop and appear sharper */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--light-text-color);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+/* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}

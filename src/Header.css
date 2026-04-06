@@ -1,0 +1,126 @@
+/* Navbar Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(90deg, rgba(255, 182, 193, 0.95), rgba(255, 192, 203, 0.95));
+  border-bottom: 2px solid #ff7f9f;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #2a0026;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 240, 245, 0.8);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #790024;
+  background-color: rgba(255, 192, 203, 1);
+  transform: translateY(-1px);
+}
+
+.header.slide-in-down {
+  animation: slideInDown 0.6s ease-out;
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Ensure dark theme adaptation */
+.dark-theme .header {
+  background: linear-gradient(90deg, rgba(80, 15, 45, 0.95), rgba(130, 0, 65, 0.95));
+  border-bottom-color: #ff7f9f;
+}
+
+.dark-theme .nav-links a {
+  color: #ffe7f5;
+  background-color: rgba(65, 10, 40, 0.8);
+}
+
+.dark-theme .nav-links a:hover,
+.dark-theme .nav-links a:focus {
+  background-color: rgba(255, 150, 175, 0.95);
+  color: #4f002d;
+}
+
+/* Gradient Logo */
+.nav-logo a {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Icon Color */
+.navbar-toggler {
+  border-color: rgba(0,0,0,0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 86, 179, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.dark-theme .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52, 152, 219, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

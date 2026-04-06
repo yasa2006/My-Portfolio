@@ -1,0 +1,220 @@
+.Contact {
+  padding: 80px 20px;
+  background-color: var(--section-background);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.Contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Contact-content h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: var(--heading-contrast-color);
+}
+
+.Contact-content h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+.connect-subtext {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: var(--light-text-color);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.social-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 22px 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;
+  min-height: 210px;
+}
+
+/* Light mode styles */
+.light-theme .social-card {
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #1a1a2e;
+}
+
+.light-theme .social-card h3 {
+  color: #1a1a2e;
+}
+
+.light-theme .social-card p {
+  color: #4a4a4a;
+}
+
+.light-theme .social-card i {
+  color: #1a1a2e;
+}
+
+.social-card i {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.social-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.social-card p {
+  font-size: 0.94em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: #e0e0e0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.light-theme .cta-button {
+  color: #1a1a2e;
+  border: 1px solid #1a1a2e;
+}
+
+.light-theme .cta-button:hover {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.social-card.linkedin:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 119, 181, 0.5);
+}
+
+.social-card.github:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(110, 84, 148, 0.5);
+}
+
+.social-card.instagram:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(228, 64, 95, 0.5);
+}
+
+.light-theme .social-card.linkedin:hover {
+  box-shadow: 0 15px 30px rgba(0, 119, 181, 0.3);
+}
+
+.light-theme .social-card.github:hover {
+  box-shadow: 0 15px 30px rgba(110, 84, 148, 0.3);
+}
+
+.light-theme .social-card.instagram:hover {
+  box-shadow: 0 15px 30px rgba(228, 64, 95, 0.3);
+}
+
+.quick-contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+.contact-item i {
+  font-size: 1.2em;
+  color: var(--primary-color);
+}
+
+.light-theme .contact-item {
+  color: #1a1a2e;
+}
+
+.light-theme .contact-item i {
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Contact-content h2 {
+    font-size: 2.2em;
+  }
+  .connect-subtext {
+    font-size: 1.1em;
+  }
+  .social-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .social-card {
+    padding: 25px 15px;
+  }
+  .quick-contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Contact {
+    padding: 40px 15px;
+  }
+  .Contact-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  .connect-subtext {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  .social-card h3 {
+    font-size: 1.3em;
+  }
+  .social-card p {
+    font-size: 0.9em;
+  }
+}

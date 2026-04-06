@@ -1,0 +1,137 @@
+.certifications-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.certification-card {
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.cert-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cert-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.cert-event {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cert-description {
+  margin: 0 0 auto 0;
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.cert-date {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.back-home {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: var(--accent-hover);
+}
+
+/* Assuming CSS variables are defined in App.css or global */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #333;
+  --muted-text: #666;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+}
+
+.dark-theme {
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text-color: #fff;
+  --muted-text: #ccc;
+  --accent-color: #4a90e2;
+  --accent-hover: #357abd;
+}
+
+.light-theme {
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --text-color: #333;
+  --muted-text: #666;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+}

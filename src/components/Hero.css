@@ -1,0 +1,210 @@
+.Hero {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--hero-background);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.98);
+}
+
+.Hero:hover {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.Hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(43, 88, 204, 0.25), rgba(26, 26, 46, 0.38));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.Hero-content {
+  max-width: 940px;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.Hero-content h1 {
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.8rem);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffffff, #00bfff, #c0c0c0);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.Hero-content .subhead {
+  font-size: 1.2rem; /* strong professional hook */
+  margin-bottom: 1.5em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.cta-buttons {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+}
+
+.button.primary {
+  background-color: #ffffff;
+  color: #1a1a2e;
+  border: 2px solid #ffffff;
+}
+
+.button.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 18px rgba(255, 255, 255, 0.45);
+  background-color: #f4f6ff;
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.button.secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.35);
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.trust-bar {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.trust-bar img {
+  height: 45px; /* Slightly larger */
+  filter: grayscale(100%) brightness(250%); /* Lighter grayscale for dark background */
+  opacity: 0.7;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.trust-bar img:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* Typing Animation */
+.typing-animation {
+  overflow: hidden;
+  border-right: .15em solid var(--primary-color); /* Use primary color for cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  color: var(--primary-color); /* Color for typing text */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Hero-content h1 {
+    font-size: 3.5em;
+  }
+  .Hero-content .subhead {
+    font-size: 1.3em;
+  }
+  .button {
+    padding: 12px 25px;
+    font-size: 1em;
+    margin: 0 10px;
+  }
+  .trust-bar {
+    gap: 30px;
+  }
+  .trust-bar img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Hero-content h1 {
+    font-size: 2.5em;
+  }
+  .Hero-content .subhead {
+    font-size: 1.1em;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .button {
+    margin: 0;
+    width: 80%;
+    align-self: center;
+  }
+  .trust-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
