@@ -1,7 +1,6 @@
 import React from 'react';
 import './Projects.css';
 import bmiTrackerImage from '../Image/Screenshot 2025-11-06 140815.png';
-import passwordImg from '../Image/password.png';
 import cropDiseaseImg from '../Image/make_it_realistic_202604031111.jpeg';
 import voiceAssistantImg from '../Image/Screenshot 2025-11-06 140214.png';
 

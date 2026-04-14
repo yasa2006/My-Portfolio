@@ -34,7 +34,7 @@ function Contact() {
             <i className="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
             <p>Professional Networking & AI Industry Updates</p>
-            <a href="https://www.linkedin.com/in/yasaswini-namana/" target="_blank" rel="noopener noreferrer" className="cta-button">Connect</a>
+            <a href="https://www.linkedin.com/in/yasaswini-namana-93708a2b1/" target="_blank" rel="noopener noreferrer" className="cta-button">Connect</a>
           </div>
           <div className="social-card github">
             <i className="fab fa-github"></i>
