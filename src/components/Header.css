@@ -1,6 +1,6 @@
 .header {
   background: var(--header-background);
-  padding: 15px 20px;
+  padding: 12px 20px;
   color: #ffffff;
   position: fixed;
   width: 100%;
@@ -11,6 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .navbar ul {
@@ -57,33 +67,103 @@
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
 @media (max-width: 900px) {
   .header {
-    padding: 12px 14px;
+    padding: 10px 14px;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .navbar ul {
-    gap: 14px;
-    flex-wrap: wrap;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px;
+    background: rgba(10, 17, 45, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar li {
+    width: 100%;
   }
 
   .navbar a {
-    font-size: 0.98em;
-    margin: 0 4px;
+    display: block;
+    width: 100%;
+    padding: 14px 12px;
+    margin: 0;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar a:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar a::after {
+    display: none;
   }
 }
 
 @media (max-width: 560px) {
   .header {
-    padding: 10px 10px;
+    padding: 10px 12px;
   }
 
-  .navbar ul {
-    gap: 10px;
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
   }
 
   .navbar a {
-    font-size: 0.88em;
-    margin: 0 2px;
+    font-size: 0.96rem;
+  }
+
+  .navbar ul {
+    top: calc(100% + 10px);
   }
 }

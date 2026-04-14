@@ -1,5 +1,5 @@
 .About {
-  padding: 80px 20px;
+  padding: 56px 16px;
   background-color: var(--section-background);
   color: var(--text-color);
   text-align: center;
@@ -131,7 +131,7 @@
 
 @media (max-width: 480px) {
   .About {
-    padding: 40px 15px;
+    padding: 48px 14px;
   }
   .About-content h2 {
     font-size: 1.8em;

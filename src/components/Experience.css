@@ -1,5 +1,5 @@
 .Experience {
-  padding: 80px 20px;
+  padding: 56px 16px;
   background-color: var(--light-background-color);
   color: var(--text-color);
   text-align: center;
@@ -233,7 +233,7 @@
 
 @media (max-width: 480px) {
   .Experience {
-    padding: 40px 15px;
+    padding: 48px 14px;
   }
   .Experience-content h2 {
     font-size: 1.8em;

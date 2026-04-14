@@ -1,12 +1,12 @@
 .Hero {
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--hero-background);
   color: #ffffff;
   text-align: center;
-  padding: 3rem 1.25rem;
+  padding: 5rem 1rem 3rem;
   position: relative;
   overflow: hidden;
   transform: scale(0.98);
@@ -30,7 +30,7 @@
   max-width: 940px;
   z-index: 1;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.25rem;
 }
 
 .Hero-content h1 {
@@ -52,7 +52,7 @@
 }
 
 .Hero-content .subhead {
-  font-size: 1.2rem; /* strong professional hook */
+  font-size: 1rem;
   margin-bottom: 1.5em;
   max-width: 700px;
   margin-left: auto;
@@ -62,7 +62,7 @@
 }
 
 .cta-buttons {
-  margin-top: 45px;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -75,7 +75,7 @@
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  margin: 0 10px;
+  margin: 0;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
@@ -112,8 +112,8 @@
 }
 
 .trust-bar {
-  margin-top: 60px;
-  padding-top: 30px;
+  margin-top: 40px;
+  padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   justify-content: center;
@@ -166,16 +166,20 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .Hero {
+    min-height: 92vh;
+    padding-top: 4.5rem;
+  }
+
   .Hero-content h1 {
-    font-size: 3.5em;
+    font-size: clamp(2.3rem, 10vw, 3.4rem);
   }
   .Hero-content .subhead {
-    font-size: 1.3em;
+    font-size: 1rem;
   }
   .button {
-    padding: 12px 25px;
-    font-size: 1em;
-    margin: 0 10px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
   }
   .trust-bar {
     gap: 30px;
@@ -186,20 +190,25 @@
 }
 
 @media (max-width: 480px) {
+  .Hero {
+    min-height: auto;
+    padding: 4.5rem 1rem 2.5rem;
+  }
+
   .Hero-content h1 {
-    font-size: 2.5em;
+    font-size: clamp(2rem, 11vw, 2.6rem);
   }
   .Hero-content .subhead {
-    font-size: 1.1em;
+    font-size: 0.95rem;
   }
   .cta-buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
   .button {
     margin: 0;
-    width: 80%;
+    width: min(100%, 320px);
     align-self: center;
   }
   .trust-bar {

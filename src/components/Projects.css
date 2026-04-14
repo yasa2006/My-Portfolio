@@ -1,5 +1,5 @@
 .Projects {
-  padding: 80px 20px;
+  padding: 56px 16px;
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: center;
@@ -32,9 +32,9 @@
 
 .Projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
 }
 
 .Project-card {
@@ -46,6 +46,7 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid var(--border-color);
+  min-width: 0;
 }
 
 .Project-card:hover {
@@ -56,7 +57,7 @@
 
 .project-image {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: contain;
   display: block;
   background-color: #f0f0f0; /* Light background for any empty space */
@@ -109,7 +110,6 @@
     font-size: 2.2em;
   }
   .Projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
   .project-info h3 {
@@ -119,7 +119,7 @@
 
 @media (max-width: 480px) {
   .Projects {
-    padding: 40px 15px;
+    padding: 48px 14px;
   }
   .Projects-content h2 {
     font-size: 1.8em;

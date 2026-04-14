@@ -1,5 +1,5 @@
 .Skills {
-  padding: 80px 20px;
+  padding: 56px 16px;
   background-color: var(--section-background);
   text-align: center;
   color: var(--text-color);
@@ -30,8 +30,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(160px, auto);
-  gap: 16px;
-  margin-top: 1.5rem;
+  gap: 14px;
+  margin-top: 1.25rem;
 }
 
 .Skills-card {
@@ -45,6 +45,7 @@
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease, color 0.35s ease;
   cursor: default;
   overflow: hidden;
+  min-width: 0;
 }
 
 .Skills-card.large,
@@ -162,36 +163,13 @@
   }
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .Skills-content h2 {
-    font-size: 2.2em;
-  }
-  .Skill-item {
-    min-width: 200px;
-    padding: 15px 20px;
-  }
-  .Skill-item h3 {
-    font-size: 1.2em;
-  }
-}
-
 @media (max-width: 480px) {
   .Skills {
-    padding: 40px 15px;
+    padding: 48px 14px;
   }
   .Skills-content h2 {
     font-size: 1.8em;
     margin-bottom: 30px;
-  }
-  .Skills-list {
-    gap: 15px;
-  }
-  .Skill-item {
-    min-width: unset;
-    width: 100%;
-    max-width: 300px;
   }
 }
 
