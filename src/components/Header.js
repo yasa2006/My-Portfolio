@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
@@ -11,7 +10,6 @@ function Header() {
           <li><a href="#about" className="hover-scale">ABOUT</a></li>
           <li><a href="#skills" className="hover-scale">SKILLS</a></li>
           <li><a href="#projects" className="hover-scale">PROJECTS</a></li>
-          <li><Link to="/certifications" className="hover-scale">CERTIFICATIONS</Link></li>
           <li><a href="#contact" className="hover-scale">CONNECT</a></li>
         </ul>
       </nav>

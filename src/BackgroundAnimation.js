@@ -6,15 +6,18 @@ const BackgroundAnimation = () => {
 
   useEffect(() => {
     const newParticles = [];
-    const numParticles = 25; // You can adjust the number of particles
+    const numParticles = 18;
 
     for (let i = 0; i < numParticles; i++) {
-      const size = Math.random() * 50 + 20; // size between 20px and 70px
+      const size = Math.random() * 12 + 10;
       const top = Math.random() * 100;
       const left = Math.random() * 100;
-      const animationDuration = Math.random() * 30 + 20; // duration between 20s and 50s
-      const animationDelay = Math.random() * 20;
-      const animationDirection = Math.random() < 0.5 ? 'normal' : 'reverse';
+      const animationDuration = Math.random() * 8 + 14;
+      const animationDelay = Math.random() * 10;
+      const horizontalOffset = Math.random() * 80 - 40;
+      const verticalOffset = Math.random() * 60 - 30;
+      const secondaryOffsetX = Math.random() * 100 - 50;
+      const secondaryOffsetY = Math.random() * 80 - 40;
 
       newParticles.push({
         id: i,
@@ -25,7 +28,10 @@ const BackgroundAnimation = () => {
           left: `${left}%`,
           animationDuration: `${animationDuration}s`,
           animationDelay: `${animationDelay}s`,
-          animationDirection: animationDirection,
+          '--dx1': `${horizontalOffset}px`,
+          '--dy1': `${verticalOffset}px`,
+          '--dx2': `${secondaryOffsetX}px`,
+          '--dy2': `${secondaryOffsetY}px`,
         },
       });
     }

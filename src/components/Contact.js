@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Contact.css';
+import resumeFile from '../Documents/YASASWINI RESUME.pdf';
 
 function Contact() {
+  const [resumeGlow, setResumeGlow] = useState(false);
+
+  useEffect(() => {
+    if (!resumeGlow) {
+      return undefined;
+    }
+
+    const resetGlow = setTimeout(() => setResumeGlow(false), 900);
+    return () => clearTimeout(resetGlow);
+  }, [resumeGlow]);
+
+  const handleResumeClick = (event) => {
+    event.preventDefault();
+    setResumeGlow(true);
+    setTimeout(() => {
+      window.open(resumeFile, '_blank', 'noopener,noreferrer');
+    }, 180);
+  };
+
   return (
     <section className="Contact fade-in">
       <div className="Contact-content">
@@ -31,11 +51,21 @@ function Contact() {
         </div>
 
         <div className="quick-contact slide-in-up">
-          <div className="contact-item">
+          <div className="contact-item email-item">
             <i className="fas fa-envelope"></i>
             <span>yasaswininamana@gmail.com</span>
           </div>
-          <div className="contact-item">
+          <a
+            className={`contact-item resume-item${resumeGlow ? ' resume-glow' : ''}`}
+            href={resumeFile}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleResumeClick}
+          >
+            <i className="fas fa-file-alt"></i>
+            <span>RESUME</span>
+          </a>
+          <div className="contact-item phone-item">
             <i className="fas fa-phone"></i>
             <span>+91 83415 53322</span>
           </div>
